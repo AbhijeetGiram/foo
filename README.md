@@ -6,22 +6,68 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# FooLib
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
 
-## Build
+Demo: https://stackblitz.com/edit/foo-lib-demo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- Easy to integrate
+- Supports every envionment
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Install
 
-## Running end-to-end tests
+```
+npm i foo-lib
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Setup
 
-## Further help
+- Add FooLibModule to App NgModule
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Use
+
+```bash
+import { Component } from '@angular/core';
+import { FooLibService } from 'foo-lib';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+
+  constructor(
+    private fooLibService: FooLibService
+  ) { }
+
+  ngOnInit(): void {
+    this.fooLibService.test('Hello World!');
+  }
+
+}
+```
+
+## Upcoming features
+
+- Custom foo
+- UX design update for foo
+- Backward compatibility with angular previous versions
+
+## FAQ
+
+Check out article on 
+[Crash Course: Publish a Library on NPM](https://medium.com/@abhijeetgiram/ep-01-un-publish-npm-myths-8c8c3001fde9)
+
+## License
+
+HelloTest
+
+---
+
+> GitHub [@AbhijeetGiram](https://github.com/AbhijeetGiram) &nbsp;&middot;&nbsp;
+> LinkedIn [@AbhijeetGiram](https://in.linkedin.com/in/abhijeet-giram-80265095) &nbsp;&middot;&nbsp;
+> Medium [@AbhijeetGiram](https://medium.com/@abhijeetgiram)
